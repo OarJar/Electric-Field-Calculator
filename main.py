@@ -1,4 +1,5 @@
 import math
+import random
 
 #Sets all variables
 k = 9*10**9
@@ -117,6 +118,16 @@ def finalCalc(YTotal, XTotal):
       angle = angle + (1 * math.pi)
   angle = math.degrees(angle)
   return electricFieldNet, angle
+
+def findRandom():
+  xRan = [0,0,0,0,0]
+  yRan = [0,0,0,0,0]
+  chargeRan = [0,0,0,0,0]
+  for index in range(5):
+    xRan[index] = random.random(-10,10)*10**2
+    yRan[index] = random.random(-10,10)*10**2
+    chargeRan[index] = random.random(-10,10)*10**2
+
 
 def output(electricFieldNet, angle, pointY, pointX):
   print("The electric field strength at (",pointX, ",",pointY,") is", format(electricFieldNet, ".2f"), "V/m." )
